@@ -1,0 +1,41 @@
+<mat-table class="lessons-table mat-elevation-z8" [dataSource]="dataSource">
+
+  <ng-container matColumnDef="num">
+      <mat-header-cell *matHeaderCellDef>No.</mat-header-cell>
+      <mat-cell *matCellDef="let sample"><input style="width:4ch;" [(ngModel)]="sample.num"></mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="date">
+      <mat-header-cell *matHeaderCellDef>Date</mat-header-cell>
+      <mat-cell *matCellDef="let sample"><input style="width:10ch;" [(ngModel)]="sample.date"></mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="species">
+      <mat-header-cell *matHeaderCellDef>Species</mat-header-cell>
+      <mat-cell *matCellDef="let sample"><input style="width:40ch;" [(ngModel)]="sample.species"></mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="primer">
+      <mat-header-cell *matHeaderCellDef>Primer</mat-header-cell>
+      <mat-cell *matCellDef="let sample"><input style="width:20ch;" [(ngModel)]="sample.primer"></mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="realtime">
+      <mat-header-cell *matHeaderCellDef>Realtime</mat-header-cell>
+      <mat-cell *matCellDef="let sample"><input style="width:10ch;" [(ngModel)]="sample.realtime"></mat-cell>
+  </ng-container>
+  
+  <ng-container matColumnDef="sex">
+      <mat-header-cell *matHeaderCellDef>Sex</mat-header-cell>
+      <mat-cell *matCellDef="let sample"><input style="width:4ch;" [(ngModel)]="sample.sex"></mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="comments">
+      <mat-header-cell *matHeaderCellDef>Comments</mat-header-cell>
+      <mat-cell *matCellDef="let sample"><input style="width:10ch;" [(ngModel)]="sample.comments"></mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+
+</mat-table>

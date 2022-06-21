@@ -1,0 +1,24 @@
+<table>
+    <thead>
+        <tr>
+            <th>No.</th>
+            <th>Date</th>
+            <th>Species</th>
+            <th>Primer</th>
+            <th>Realtime</th>
+            <th>Sex</th>
+            <th>Comments</th>
+        </tr>  
+    </thead>
+    <tbody *ngFor="let sample of dataSource | async">
+        <tr>
+            <td><input style="width:4ch;" [(ngModel)]="sample.num"></td>
+            <td><input style="width:10ch;" [(ngModel)]="sample.date"></td>
+            <td><input style="width:40ch;" [(ngModel)]="sample.species"></td>
+            <td><input style="width:20ch;" [(ngModel)]="sample.primer"></td>
+            <td><input style="width:10ch;" [(ngModel)]="sample.realtime"></td>
+            <td><input style="width:4ch;" [(ngModel)]="sample.sex"></td>
+            <td><input style="width:10ch;" [(ngModel)]="sample.comments"></td>
+        </tr>
+    </tbody>  
+</table>

@@ -1,0 +1,8 @@
+<div>
+    <label for="import">Copy and Paste Excel Cells into this box:</label>
+    <textarea name="import" [(ngModel)] = "inputText"></textarea>
+    <button name="importButton" (click)="importSamples()">Submit</button>
+    <button name="clearButton" (click)="clearInput()">Clear</button>
+    <button name="sortButton" (click)="sortSamples()">Sort</button>
+    <textarea name="output" [(ngModel)] = "outputText"></textarea>
+</div>
